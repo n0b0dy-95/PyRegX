@@ -1,7 +1,7 @@
 # PyRegX: A Multivariate Regression Plug-in for PyMol
 
 ## Version:
-    0.5
+    0.23 (for PyMol version > 2.5.0)
 
 ## Introduction
 ***PyRegX*** is a GUI-based plugin designed to perform robust ***Multiple Linear Regression (MLR)*** analysis on structured datasets directly from PyMol. Built with Customtkinter, it allows users to load datasets, define regression targets, validate models using statistical metrics, and export results-all without writing code.
@@ -10,14 +10,14 @@
 
       - Load training and test datasets in ***.CSV*** format
       - Automatic removal of null-valued columns
-      - Select dependent (***Y***) variable *via* dialog
-      - Run multivariate regression using ***statsmodels.OLS***
+      - Select dependent (***Y***) variable *via* dialogbox
+      - Run multivariate regression
       - **Validate models with**:
         - ***Internal Metrics:*** *R², Adjusted R², MAE, RMSE, VIF, PRESS, SEE*
         - External Metrics: Q²(f1, f2), MAE, RMSE
         - ***Cross-Validation:*** Leave-One-Out *Q²* and *MAE*
       - **Export**:
-        - Statistical summaries (txt)
+        - Statistical summaries (***.txt***)
         - Prediction tables (_train.csv, _test.csv)
       - **Visualization**:
         - Correlation Heatmap
