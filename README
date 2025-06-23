@@ -1,83 +1,87 @@
-**PyRegX: A Multivariate Regression Plug-in for PyMol**
+# PyRegX: A Multivariate Regression Plug-in for PyMol
 
+## Version:
+    0.5
 
+## Introduction
 ***PyRegX*** is a GUI-based plugin designed to perform robust ***Multiple Linear Regression (MLR)*** analysis on structured datasets directly from PyMol. Built with Customtkinter, it allows users to load datasets, define regression targets, validate models using statistical metrics, and export results-all without writing code.
 
 
-**Key Features**
+## Key Features
 
-- Load training and test datasets in ***.CSV*** format
-- Automatic removal of null-valued columns
-- Select dependent (***Y***) variable *via* dialog
-- Run multivariate regression using ***statsmodels.OLS***
-- **Validate models with**:
-  - ***Internal Metrics:*** *R², Adjusted R², MAE, RMSE, VIF, PRESS, SEE*
-  - <b><i>External Metrics:</i></b> <i>Q² (f<sub>1</sub>, f<sub>2</sub>), MAE, RMSE</i>
-  - ***Cross-Validation:*** Leave-One-Out *Q²* and *MAE*
-- **Export**:
-  - Statistical summaries (txt)
-  - Prediction tables (\_train.csv, \_test.csv)
-- **Visualization**:
-  - Correlation Heatmap
-  - Observed vs Predicted Scatter Plot
-- **Easy integration as a PyMol Plug-in** (Menu -> Plugin -> PyRegX gui)
+      - Load training and test datasets in ***.CSV*** format
+      - Automatic removal of null-valued columns
+      - Select dependent (***Y***) variable *via* dialog
+      - Run multivariate regression using ***statsmodels.OLS***
+      - **Validate models with**:
+        - ***Internal Metrics:*** *R², Adjusted R², MAE, RMSE, VIF, PRESS, SEE*
+        - External Metrics: Q²(f1, f2), MAE, RMSE
+        - ***Cross-Validation:*** Leave-One-Out *Q²* and *MAE*
+      - **Export**:
+        - Statistical summaries (txt)
+        - Prediction tables (_train.csv, _test.csv)
+      - **Visualization**:
+        - Correlation Heatmap
+        - Observed vs Predicted Scatter Plot
+      - **Easy integration as a PyMol Plug-in** (Menu -> Plugin -> PyRegX gui)
 
-***NOTE: The Index column must be at the first column of the input files.***
+# NOTE: The Index column must be at the first column of the input files.***
 
-**Dependencies**
+# Dependencies
 
 Ensure the following packages are installed in your Python environment:
 
-- os, sys, subprocess, warnings
-- NumPy, Pandas
-- Scikit-Learn, statsmodels
-- Seaborn, Matplotlib
-- Tkinter
-- Customtkinter (for modern GUI components)
-- PyMol (for integration)
+      - os, sys, subprocess, warnings
+      - NumPy, Pandas
+      - Scikit-Learn, statsmodels
+      - Seaborn, Matplotlib
+      - Tkinter
+      - Customtkinter (for modern GUI components)
+      - PyMol (for integration)
 
-**Installation**
+# Installation
 
-**Option 1: Install in PyMol environment (manual)**
+## Option 1: Install in PyMol environment (manual)
 
-1. Place the plugin .py file in your PyMol plugins folder (e.g. ~/.pymol/startup/ or via Plugin Manager).
-1. Launch PyMol and navigate to **Plugin > Manage > Install** and select the .py file.
-1. PyRegX will appear in the **Plugin** menu.
+      1. Place the plugin .py file in your PyMol plugins folder (e.g. ~/.pymol/startup/ or via Plugin Manager).
+      2. Launch PyMol and navigate to **Plugin > Manage > Install** and select the .py file.
+      3. PyRegX will appear in the **Plugin** menu.
 
-**Option 2: Install required Python dependencies**
+## Option 2: Install required Python dependencies
 
-If you're not using a pre-configured Python environment, install dependencies with pip:
+   If you're not using a pre-configured Python environment, install dependencies with pip:
 
-$ pip install pandas numpy scikit-learn statsmodels matplotlib seaborn customtkinter
+            $ pip install pandas numpy scikit-learn statsmodels matplotlib seaborn customtkinter
 
-**Usage Workflow**
+## Usage Workflow
 
-1. **Launch PyRegX GUI** from PyMol:
-   *Plugin → PyRegX gui (v0.23)*
-1. **Load Training Dataset**
-   1. Click *"Load Training Data"* and select a ***.csv*** file
-   1. The file must contain both independent and dependent variables
-1. **Load Test Dataset**
-   1. Click *"Load Test Data"* and select a .csv file with the same structure
-1. **Enter Dependent Variable (*Y*)**
-   1. Click *"Enter Dependent Column"*
-   1. Provide the exact column name to be predicted
-1. **Select Output File**
-   1. Click *"Select Output File"* to specify where to save results
-1. **Run Analysis**
-   1. Click *"Run Analysis"*
-   1. Generates regression summary, validation metrics, and prediction output
-1. **Visual Output**
-   1. Correlation heatmap and scatter plot will pop up post-analysis
+      1. **Launch PyRegX GUI** from PyMol:
+               *Plugin → PyRegX gui (v0.23)*
+      2. **Load Training Dataset**
+               A. Click *"Load Training Data"* and select a ***.csv*** file
+               B. The file must contain both independent and dependent variables
+      3. **Load Test Dataset**
+               A. Click *"Load Test Data"* and select a .csv file with the same structure
+      4. **Enter Dependent Variable (*Y*)**
+               A. Click *"Enter Dependent Column"*
+               B. Provide the exact column name to be predicted
+      5. **Select Output File**
+               A. Click *"Select Output File"* to specify where to save results
+      6. **Run Analysis**
+               A. Click *"Run Analysis"*
+               B. Generates regression summary, validation metrics, and prediction output
+      7. **Visual Output**
+               A. Correlation heatmap and scatter plot will pop up post-analysis
 
 
-
-**Author**
+# Author
 
 **SUVANKAR BANERJEE**
 
 **Email: <suvankarbanerjee1995@gmail.com>**
-**Version:** 0.23
+
+
+## LICENSE
 
 **Custom Non-Commercial License v1.0**
 
@@ -136,6 +140,3 @@ copy, modify, merge, publish, and distribute the Software, subject to the follow
 By using the Software, you agree to the terms of this License.
 
 ***This license shall be governed by Indian and international copyright laws, and any disputes arising under this license shall be resolved under the principles of fairness, good faith, and mutual respect, without limiting it to any single jurisdiction***.
-
-4 | Page
-
