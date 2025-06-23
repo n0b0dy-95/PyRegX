@@ -8,21 +8,21 @@
 
 ## Key Features
 
-      - Load training and test datasets in ***.CSV*** format
+      - Load training and test datasets in .CSV format
       - Automatic removal of null-valued columns
-      - Select dependent (***Y***) variable *via* dialogbox
+      - Select dependent variable via dialogbox
       - Run multivariate regression
-      - **Validate models with**:
-        - ***Internal Metrics:*** *R², Adjusted R², MAE, RMSE, VIF, PRESS, SEE*
+      - Validate models with:
+        - Internal Metrics: R², Adjusted R², MAE, RMSE, VIF, PRESS, SEE
         - External Metrics: Q²(f1, f2), MAE, RMSE
-        - ***Cross-Validation:*** Leave-One-Out *Q²* and *MAE*
-      - **Export**:
-        - Statistical summaries (***.txt***)
+        - Cross-Validation: Leave-One-Out Q² and MAE
+      - Export:
+        - Statistical summaries (.txt)
         - Prediction tables (_train.csv, _test.csv)
-      - **Visualization**:
+      - Visualization:
         - Correlation Heatmap
         - Observed vs Predicted Scatter Plot
-      - **Easy integration as a PyMol Plug-in** (Menu -> Plugin -> PyRegX gui)
+      - Easy integration as a PyMol Plug-in (Menu -> Plugin -> PyRegX gui)
 
 # NOTE: The Index column must be at the first column of the input files.***
 
@@ -36,7 +36,7 @@ Ensure the following packages are installed in your Python environment:
       - Seaborn, Matplotlib
       - Tkinter
       - Customtkinter (for modern GUI components)
-      - PyMol (for integration)
+      - PyMol (> v2.5.0 for integration)
 
 ## Installation
 
@@ -54,22 +54,22 @@ Ensure the following packages are installed in your Python environment:
 
 ## Usage Workflow
 
-      1. **Launch PyRegX GUI** from PyMol:
-               *Plugin → PyRegX gui (v0.23)*
-      2. **Load Training Dataset**
-               A. Click *"Load Training Data"* and select a ***.csv*** file
+      1. Launch PyRegX GUI from PyMol:
+               Plugin → PyRegX gui (v0.23)
+      2. Load Training Dataset
+               A. Click "Load Training Data" and select a .csv file
                B. The file must contain both independent and dependent variables
-      3. **Load Test Dataset**
-               A. Click *"Load Test Data"* and select a .csv file with the same structure
-      4. **Enter Dependent Variable (*Y*)**
-               A. Click *"Enter Dependent Column"*
+      3. Load Test Dataset
+               A. Click "Load Test Data" and select a .csv file with the same structure
+      4. Enter Dependent Variable (Y)
+               A. Click "Enter Dependent Column"
                B. Provide the exact column name to be predicted
-      5. **Select Output File**
-               A. Click *"Select Output File"* to specify where to save results
-      6. **Run Analysis**
-               A. Click *"Run Analysis"*
+      5. Select Output File
+               A. Click "Select Output File" to specify where to save results
+      6. Run Analysis
+               A. Click "Run Analysis"
                B. Generates regression summary, validation metrics, and prediction output
-      7. **Visual Output**
+      7. Visual Output
                A. Correlation heatmap and scatter plot will pop up post-analysis
 
 # Author
@@ -137,4 +137,3 @@ copy, modify, merge, publish, and distribute the Software, subject to the follow
 By using the Software, you agree to the terms of this License.
 
 ***This license shall be governed by Indian and international copyright laws, and any disputes arising under this license shall be resolved under the principles of fairness, good faith, and mutual respect, without limiting it to any single jurisdiction***.
-
